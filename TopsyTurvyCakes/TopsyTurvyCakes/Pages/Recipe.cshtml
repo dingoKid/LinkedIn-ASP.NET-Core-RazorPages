@@ -1,6 +1,6 @@
-﻿@page "{coca}"
+﻿@page "{recId}"
 @{
-    var id = long.Parse((string)RouteData.Values["coca"]);
+    var id = long.Parse((string)RouteData.Values["recId"]);
     var recipe = await RecipesService.FindAsync(id);
     ViewData["Title"] = recipe.Name;
 }
